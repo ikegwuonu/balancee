@@ -1,0 +1,246 @@
+.one {
+  flex: 1;
+  background-color: #000000;
+  padding: 1rem;
+  padding-left: 1.5rem;
+  border-radius: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+@media (max-width: 1290px) {
+  .one {
+    border-radius: 0px;
+  }
+}
+@media (max-width: 1150px) {
+  .one {
+    display: none;
+  }
+}
+.one .menu {
+  transition: all ease-in-out 300ms;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.one .menu:hover {
+  background-color: #2f6fa3;
+  padding: 0 0.6rem;
+  border-radius: 1rem;
+}
+.one .menu img {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.one .center {
+  padding-top: 3rem;
+}
+
+.two {
+  flex: 4;
+}
+@media (max-width: 1290px) {
+  .two {
+    padding: 1rem;
+  }
+}
+@media (max-width: 1150px) {
+  .two {
+    flex: 0.7;
+  }
+}
+.two .head {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.two .head img {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0;
+  margin: 0;
+}
+.two .head p {
+  color: #5c5c5c;
+  padding-top: 0;
+  margin-top: 0;
+}
+.two .card {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media (max-width: 500px) {
+  .two .card {
+    grid-template-columns: 1fr;
+  }
+}
+.two .transactions {
+  padding: 1rem;
+  overflow-x: scroll;
+  box-shadow: 0px 1px 4px -1px rgba(255, 255, 255, 0.13);
+  scrollbar-width: 4px;
+  scrollbar-color: #2f6fa3;
+  min-width: 700px;
+  scroll-margin-block-start: inherit;
+}
+.two .transactions .transaction {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr;
+  color: #252525;
+  border-bottom: 1px solid #c7c7c7;
+}
+.two .transactions .transaction.heading {
+  font-weight: bold;
+}
+
+.three {
+  flex: 1.3;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (max-width: 1290px) {
+  .three {
+    padding: 1rem;
+    padding-left: 0;
+  }
+}
+@media (max-width: 1150px) {
+  .three {
+    flex: 0.3;
+  }
+}
+.three .head {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+@media (max-width: 900px) {
+  .three .head {
+    display: none;
+  }
+}
+.three .head img {
+  width: 30px;
+  height: 30px;
+}
+.three .head div {
+  line-height: 0.4;
+  font-weight: bold;
+}
+.three .head div .name {
+  color: #2f6fa3;
+}
+.three .head div .email {
+  color: #252525;
+}
+.three .cash-out {
+  text-align: center;
+}
+.three .cash-out button {
+  padding: 1rem;
+  border-radius: 2rem;
+  border: 1px solid #2f6fa3;
+  margin-right: 1rem;
+}
+.three .cash-out button:hover {
+  background: #5c5c5c;
+  color: white;
+}
+
+.active-card {
+  background-color: #424242;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+.active-card img {
+  background-color: #2f6fa3;
+  padding: 1rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+.active-card p {
+  line-height: 0.4;
+}
+.active-card .card-text {
+  color: #c7c7c7;
+}
+.active-card .card-amount {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.notactive-card {
+  background-color: #ececec;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+.notactive-card img {
+  background-color: #c7c7c7;
+  padding: 1rem;
+  border-radius: 999px;
+  margin-bottom: 1.5rem;
+}
+.notactive-card p {
+  line-height: 0.4;
+}
+@media (max-width: 1150px) {
+  .notactive-card p {
+    line-height: normal;
+  }
+}
+.notactive-card .card-text {
+  color: #252525;
+}
+.notactive-card .card-amount {
+  color: #000000;
+  font-size: 1.5rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+}
+
+.app {
+  padding: 1rem;
+  display: flex;
+  overflow: hidden;
+  gap: 1rem;
+}
+@media (max-width: 1290px) {
+  .app {
+    padding: 0;
+  }
+}
+@media (max-width: 1150px) {
+  .app {
+    grid-template-columns: 0.8fr 0.2fr;
+  }
+}
+@media (max-width: 900px) {
+  .app {
+    flex-direction: column;
+  }
+}
+
+::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2f6fa3;
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2f6fa3;
+  border-radius: 1rem;
+}/*# sourceMappingURL=main.css.map */

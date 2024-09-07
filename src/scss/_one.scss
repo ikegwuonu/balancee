@@ -1,0 +1,36 @@
+.one{
+    @media(max-width:$xlg){
+        border-radius: 0px;
+    }
+    @media(max-width: $lg){
+        display: none;
+        
+    }
+    flex: 1;
+    background-color: $black;
+    padding: 1rem;
+    padding-left: 1.5rem;
+    border-radius: 1rem;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    .menu{
+        &:hover{
+            background-color: $blue;
+            padding:0 0.6rem;
+            border-radius: 1rem;
+        }
+        transition: all ease-in-out 300ms;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        img{
+            width: fit-content;
+        }
+    }
+    .center{
+        padding-top: 3rem;
+
+    }
+}
