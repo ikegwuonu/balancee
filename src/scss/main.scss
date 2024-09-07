@@ -1,10 +1,13 @@
-@import 'config','one','two','three','card','cashbackHistory','cashoutOptions','earningOverview';
+@import url('https://fonts.googleapis.com/css2?family=Livvic:wght@400;700&display=swap');
+
+@import 'config','one','two','three','card';
 
 body{
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
     min-height: 100vh;
+    font-family: 'Livvic', sans-serif;
 }
 .app{
     @media(max-width:$xlg){
@@ -24,15 +27,3 @@ body{
     
 }
 
-::-webkit-scrollbar{
-    height: 4px;
-    width: 4px;
-}
-::-webkit-scrollbar-track{
-    background: $blue;
-    border-radius: 1rem;
-}
-::-webkit-scrollbar-thumb{
-    background: $blue;
-    border-radius: 1rem;
-}

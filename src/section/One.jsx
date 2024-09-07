@@ -1,39 +1,67 @@
-import React from 'react'
-import { cards, category, login, message, setting, tenx } from '../assets'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { cards, category, login, message, setting, tenx } from '../assets';
+
+const menuItems = [
+  { img: category, label: 'Record Summary' },
+  { img: cards, label: 'Analytics' },
+  { img: message, label: 'News' },
+  { img: tenx, label: 'E-pay' },
+  { img: setting, label: 'Settings' },
+  { img: login, label: 'Log-out' },
+];
+
+const containerVariants = {
+  hidden: { opacity: 0, x: '-100vw' },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1, // Increase duration for smoother transition
+      ease: "easeOut", // Use easeOut for a smoother finish
+      staggerChildren: 0.3, // Increase stagger duration for smoother appearance
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, x: '-100vw' },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.7, // Slightly longer duration for smoother entrance
+      ease: "easeOut", // Use easeOut to create a smoother motion
+    },
+  },
+};
 
 const One = () => {
   return (
-    <section className='one'>
-        <h4>Welcome, Juliet</h4>
-        <div className='menu'>
-            <img src={category} alt="" />
-            <p>Record Summary</p>
-        </div>
-        <div className='menu'>
-            <img src={cards} alt="" />
-            <p>Analytics</p>
-        </div>
-        <div className='menu'>
-            <img src={message} alt="" />
-            <p>News</p>
-        </div>
-        <div className='menu'>
-            <img src={tenx} alt="" />
-            <p>E-pay</p>
-        </div>
-        <div className='center'>
-            <p>GENERAL</p>
-        <div className='menu'>
-            <img src={setting} alt="" />
-            <p>Settings</p>
-        </div>
-        <div className='menu'>
-            <img src={login} alt="" />
-            <p>Log-out</p>
-        </div>
-        </div>
-    </section>
-  )
-}
+    <motion.section
+      className="one"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <h4>Welcome, Juliet</h4>
+      {menuItems.slice(0, 4).map((item, index) => (
+        <motion.div className="menu" key={index} variants={itemVariants}>
+          <img src={item.img} alt={`${item.label} Icon`} />
+          <p>{item.label}</p>
+        </motion.div>
+      ))}
+      <div className="center">
+        <p>GENERAL</p>
+        {menuItems.slice(4).map((item, index) => (
+          <motion.div className="menu" key={index} variants={itemVariants}>
+            <img src={item.img} alt={`${item.label} Icon`} />
+            <p>{item.label}</p>
+          </motion.div>
+        ))}
+      </div>
+    </motion.section>
+  );
+};
 
-export default One
+export default One;

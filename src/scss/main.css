@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Livvic:wght@400;700&display=swap");
 .one {
   flex: 1;
   background-color: #000000;
@@ -83,8 +84,12 @@
   box-shadow: 0px 1px 4px -1px rgba(255, 255, 255, 0.13);
   scrollbar-width: 4px;
   scrollbar-color: #2f6fa3;
-  min-width: 700px;
-  scroll-margin-block-start: inherit;
+}
+@media (max-width: 500px) {
+  .two .transactions {
+    padding: 0;
+    text-align: center;
+  }
 }
 .two .transactions .transaction {
   display: grid;
@@ -206,6 +211,7 @@ body {
   padding: 0;
   scroll-behavior: smooth;
   min-height: 100vh;
+  font-family: "Livvic", sans-serif;
 }
 
 .app {
@@ -228,19 +234,4 @@ body {
   .app {
     flex-direction: column;
   }
-}
-
-::-webkit-scrollbar {
-  height: 4px;
-  width: 4px;
-}
-
-::-webkit-scrollbar-track {
-  background: #2f6fa3;
-  border-radius: 1rem;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #2f6fa3;
-  border-radius: 1rem;
 }/*# sourceMappingURL=main.css.map */
