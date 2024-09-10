@@ -4,7 +4,7 @@
         padding-left: 0;
     }
     @media(max-width: $lg){
-        flex: 0.3;
+        flex: 1 !important;
     }
     flex: 1.3;
     display: flex;

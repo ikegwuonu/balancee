@@ -18,6 +18,7 @@
 @media (max-width: 1150px) {
   .one {
     display: none;
+    flex: 0;
   }
 }
 .one .menu {
@@ -49,7 +50,7 @@
 }
 @media (max-width: 1150px) {
   .two {
-    flex: 0.7;
+    flex: 3 !important;
   }
 }
 .two .head {
@@ -80,15 +81,16 @@
 }
 .two .transactions {
   padding: 1rem;
-  overflow-x: scroll;
+  overflow-x: scroll !important;
   box-shadow: 0px 1px 4px -1px rgba(255, 255, 255, 0.13);
-  scrollbar-width: 4px;
-  scrollbar-color: #2f6fa3;
 }
 @media (max-width: 500px) {
   .two .transactions {
     padding: 0;
-    text-align: center;
+    width: 400px;
+    overflow-x: scroll !important;
+    scrollbar-width: 4px;
+    scrollbar-color: #2f6fa3;
   }
 }
 .two .transactions .transaction {
@@ -96,6 +98,11 @@
   grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr;
   color: #252525;
   border-bottom: 1px solid #c7c7c7;
+}
+@media (max-width: 500px) {
+  .two .transactions .transaction {
+    width: 600px;
+  }
 }
 .two .transactions .transaction.heading {
   font-weight: bold;
@@ -115,7 +122,7 @@
 }
 @media (max-width: 1150px) {
   .three {
-    flex: 0.3;
+    flex: 1 !important;
   }
 }
 .three .head {
@@ -234,4 +241,19 @@ body {
   .app {
     flex-direction: column;
   }
+}
+
+::-webkit-scrollbar {
+  height: 4px;
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #c7c7c7;
+  border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2f6fa3;
+  border-radius: 10px;
 }/*# sourceMappingURL=main.css.map */

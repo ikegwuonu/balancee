@@ -4,6 +4,7 @@
     }
     @media(max-width: $lg){
         display: none;
+        flex: 0;
         
     }
     flex: 1;

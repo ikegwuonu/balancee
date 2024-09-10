@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Livvic:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Livvic:wght@400;700&display=swap')    ;
 
 @import 'config','one','two','three','card';
 
@@ -8,7 +8,11 @@ body{
     scroll-behavior: smooth;
     min-height: 100vh;
     font-family: 'Livvic', sans-serif;
+    
+    
 }
+
+
 .app{
     @media(max-width:$xlg){
         padding: 0;
@@ -24,6 +28,20 @@ body{
     display: flex;
     overflow: hidden;
     gap: 1rem;
+    
+    
+}
+::-webkit-scrollbar{
+    height: 4px;
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background: $textlightgrey;
+    border-radius: 1px;
+}
+::-webkit-scrollbar-thumb{
+    background: $blue;
+    border-radius: 10px;
     
 }
 

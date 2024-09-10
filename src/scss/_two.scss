@@ -3,7 +3,7 @@
         padding: 1rem;
     }
     @media(max-width: $lg){
-        flex: 0.7;
+        flex: 3 !important;
     }
     flex: 4;
     .head{
@@ -34,18 +34,27 @@
     .transactions{
         @media(max-width: $sm){
             padding: 0;
-            text-align: center;
+            width: 400px;
+            overflow-x: scroll !important;
+            scrollbar-width: 4px;
+            scrollbar-color: $blue;
+            
+            
         }
+
+       
         padding: 1rem;
-        overflow-x: scroll;
+        overflow-x: scroll !important;
         box-shadow: 0px 1px 4px -1px rgba(255,255,255,0.13);
-        scrollbar-width: 4px;
-        scrollbar-color: $blue;
+        
         
         
         
         
         .transaction{
+           @media(max-width: $sm){
+            width: 600px;
+           }
             display: grid;
             grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr;
             color:$textdarkgrey;
